@@ -10,6 +10,7 @@ int main()
 
      int unNumero;
      int sePudo;
+     int estaEntreRangos(int superior, int inferior, int* elNumero);
 
      sePudo = dameUnEntero("\nIngresa tu edad\n",100,3, &unNumero);
 
@@ -22,6 +23,12 @@ int main()
             {
             printf("\nel numero es :%d\n", unNumero);
             }
+       if (estaEntreRangos (100, 0, 22 ) == 0)
+        {
+        }
+       else
+        {
+        }
 
 
      return 0;
@@ -43,6 +50,15 @@ int dameUnEntero(char* mensaje,int max, int cantidad, int *pNumero)
                 {
                     return 0;
                 }
+        }
+    return 1;
+}
+
+int estaEntreRangos(int superior,int inferior, int elNumero)
+{
+    if(elNumero<superior && elNumero > inferior)
+        {
+            return 0;
         }
     return 1;
 }
