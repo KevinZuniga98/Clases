@@ -12,23 +12,23 @@ void mostrarUnArray (int parametroArray[],int cantidad)
     }
 
 }
-void inicializarUnArray(int parametroArray[],int cantidad)// no es necesario en este problema, pero sirve para poder saber si estoy usando un indice del array o si esta vacio / con valor ya fijado
+void inicializarUnArray(int parametroArray[],int cantidad,int inicializacion)// no es necesario en este problema, pero sirve para poder saber si estoy usando un indice del array o si esta vacio / con valor ya fijado
 {
     int indice;
 
     for(indice = 0; indice < CANTIDAD; indice ++) //1-Inicializo
     {
-        parametroArray[indice] = 0;
+        parametroArray[indice] = inicializacion;
     }
 
 }
-void cargaSecuncialUnArray(int parametroArray[],int cantidad)
+void cargaSecuncialUnArray(int parametroArray[],int cantidad,char mensaje[])
 {
     int indice ;
 
     for(indice = 0; indice < CANTIDAD; indice ++)
     {
-        printf("\n ingrese numero:");
+        printf( mensaje);
         scanf("%d",&parametroArray[indice]);
 
     }
@@ -71,5 +71,51 @@ int dameElIndiceDelMaximo(int parametroArray[],int cantidad)
     }
     return indiceMaximo;
 
+}
+void ordernarDesc(int parametroArray[],int cantidad) //22,11,33
+{
+    int indice ;
+    int aux;
+    int siguiente;
+
+    for(indice = 0; indice < CANTIDAD-1; indice ++)
+    {
+
+      for(siguiente = indice + 1;siguiente < CANTIDAD; siguiente ++)
+      {
+         if(parametroArray[indice] > parametroArray[siguiente])
+            {
+                aux = parametroArray[indice];
+                parametroArray[indice] = parametroArray[siguiente];
+                parametroArray[siguiente] = aux;
+
+            }
+
+      }
+
+    }
+}
+void ordernarAsc(int parametroArray[],int cantidad)
+{
+    int indice ;
+    int aux;
+    int siguiente;
+
+    for(indice = 0; indice < CANTIDAD-1; indice ++)
+    {
+
+      for(siguiente = indice + 1;siguiente < CANTIDAD; siguiente ++)
+      {
+         if(parametroArray[indice] < parametroArray[siguiente])
+            {
+                aux = parametroArray[indice];
+                parametroArray[indice] = parametroArray[siguiente];
+                parametroArray[siguiente] = aux;
+
+            }
+
+      }
+
+    }
 }
 
