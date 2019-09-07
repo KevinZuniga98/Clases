@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #define CANTIDAD 3
 void mostrarUnArray(int parametroArray[],int cantidad);
-void inicializarUnArray(int parametroArray[],int cantidad);
+//void inicializarUnArray(int parametroArray[],int cantidad);
 void cargaSecuncialUnArray(int parametroArray[],int cantidad);
 int dameElMaximo(int parametroArray[],int cantidad);
 int dameElIndiceDelMaximo(int parametroArray[],int cantidad);
@@ -17,7 +17,7 @@ int main()
     //mostrarUnArray(miArray[CANTIDAD]); da cualquier numero
     //mostrarUnArray(miArray[]); no anda, crashea
      // pasar por parametro
-    inicializarUnArray(miArray, CANTIDAD);
+    //inicializarUnArray(miArray, CANTIDAD);
     cargaSecuncialUnArray (miArray, CANTIDAD);
     mostrarUnArray(miArray, CANTIDAD);
 
@@ -41,7 +41,7 @@ void mostrarUnArray (int parametroArray[],int cantidad)
     }
 
 }
-void inicializarUnArray(int parametroArray[],int cantidad)
+void inicializarUnArray(int parametroArray[],int cantidad)// no es necesario en este problema, pero sirve para poder saber si estoy usando un indice del array o si esta vacio / con valor ya fijado
 {
     int indice;
 
@@ -88,11 +88,13 @@ int dameElIndiceDelMaximo(int parametroArray[],int cantidad)
     int maximo;
     int indiceMaximo;
 
+    maximo = dameElMaximo(parametroArray,cantidad);
+
     for(indice = 0; indice < CANTIDAD; indice ++)
     {
-        if(parametroArray[indice]> maximo|| indice == 0)
+        if(parametroArray[indice]==maximo)
             {
-                maximo =parametroArray[indice];
+
                 indiceMaximo =indice;
             }
     }
