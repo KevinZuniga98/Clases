@@ -1,5 +1,12 @@
 # depslib dependency file v1.0
-1567863042 source:c:\users\alumno\desktop\arrays y punteros\main.c
+1567865602 source:c:\users\alumno\desktop\arrays y punteros\main.c
 	<stdio.h>
 	<stdlib.h>
+	"Arrays.h"
+
+1567865624 source:c:\users\alumno\desktop\arrays y punteros\arrays.c
+	<stdio.h>
+	<stdlib.h>
+
+1567865559 c:\users\alumno\desktop\arrays y punteros\arrays.h
 
