@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1568069051 source:c:\users\tempest\desktop\ejercicio de practica\array.c
+	<stdio.h>
+	<stdlib.h>
+
+1568069006 source:c:\users\tempest\desktop\ejercicio de practica\main.c
+	<stdio.h>
+	<stdlib.h>
+	"array.h"
+
+1568068669 c:\users\tempest\desktop\ejercicio de practica\array.h
+
